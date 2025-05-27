@@ -20,7 +20,7 @@ name:               image-rider-apple-prodos
 -- PVP summary:     +-+------- breaking API changes
 --                  | | +----- non-breaking API additions
 --                  | | | +--- code changes with no API change
-version:            0.1.0.0
+version:            0.1.0.1
 
 -- A short (one-line) description of the package.
 synopsis:           Image Rider disk image plugin for Apple ][ ProDOS disks
@@ -75,13 +75,16 @@ library
 
     -- Other library packages from which modules are imported.
     build-depends:
-        base ^>=4.17.2.1,
-        bytestring ^>=0.11.5.3,
-        containers ^>=0.6.8,
-        hspec ^>=2.11.7,
+        base ^>=4.18.3.0,
+        binary == 0.8.9.3,
+        bytestring ^>=0.12.2.0,
+        containers ^>=0.7,
+        hspec ^>=2.11.12,
         hspec-megaparsec ^>=2.2.1,
-        megaparsec ^>=9.6.1,
-        transformers ^>= 0.5.6.2
+        megaparsec ^>=9.7.0,
+        random == 1.3.1,
+        splitmix == 0.1.1,
+        transformers ^>= 0.6.2.0
 
     -- Directories containing source files.
     hs-source-dirs:   src
@@ -110,12 +113,15 @@ executable image-rider-apple-prodos
     -- There might be a better way of starting the REPL in a different
     -- environment.  I don't know.
     build-depends:
-        base ^>=4.17.2.1,
-        bytestring ^>=0.11.5.3,
-        hspec ^>=2.11.7,
+        base ^>=4.18.3.0,
+        binary == 0.8.9.3,
+        bytestring ^>=0.12.2.0,
+        hspec ^>=2.11.12,
         hspec-megaparsec ^>=2.2.1,
-        megaparsec ^>=9.6.1,
-        transformers ^>= 0.5.6.2,
+        megaparsec ^>=9.7.0,
+        random == 1.3.1,
+        splitmix == 0.1.1,
+        transformers ^>= 0.6.2.0,
         image-rider-apple-prodos
 
     -- Directories containing source files.
@@ -149,13 +155,16 @@ test-suite image-rider-apple-prodos-test
 
     -- Test dependencies.
     build-depends:
-        base ^>=4.17.2.1,
-        bytestring ^>=0.11.5.3,
-        containers ^>=0.6.8,
-        hspec ^>=2.11.7,
+        base ^>=4.18.3.0,
+        binary == 0.8.9.3,
+        bytestring ^>=0.12.2.0,
+        containers ^>=0.7,
+        hspec ^>=2.11.12,
         hspec-expectations ^>=0.8.4,
         hspec-megaparsec ^>=2.2.1,
-        megaparsec ^>=9.6.1,
-        text ^>= 2.1.1,
-        transformers ^>= 0.5.6.2,
+        megaparsec ^>=9.7.0,
+        random == 1.3.1,
+        splitmix == 0.1.1,
+        text ^>= 2.1.2,
+        transformers ^>= 0.6.2.0,
         image-rider-apple-prodos
